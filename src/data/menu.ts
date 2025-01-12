@@ -1,0 +1,1 @@
+export default ['Collections', 'Men', 'Women', 'About', 'Contact'];
