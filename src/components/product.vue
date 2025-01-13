@@ -6,9 +6,9 @@
             <h1>{{ props.productItem.name }}</h1>
             <p>{{ props.productItem.desc }}</p>
             <div class="flex gap-2">
-                <span>{{ props.productItem.price * props.productItem.discount / 100 }}</span>
-                <span>{{ props.productItem.discount }}</span>
-                <span class="ml-auto">{{ props.productItem.price }}</span>
+                <span>${{ (props.productItem.price * props.productItem.discount / 100).toFixed(2) }}</span>
+                <span class="bg-black text-white rounded px-2">{{ props.productItem.discount }}%</span>
+                <span class="ml-auto">${{ props.productItem.price.toFixed(2) }}</span>
             </div>
         </div>
     </div>
