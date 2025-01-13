@@ -1,10 +1,14 @@
 <template>
-    <div class="relative">
-        <Transition name="viewer">
-            <img :key="currentIndex" :src="currentImage.src" :alt="currentImage.alt" />
-        </Transition>
-        <button class="nav-btn absolute top-1/2 left-4" @click="goPreviousImage"><img src="/src/assets/images/icon-previous.svg" alt="previous icon" /></button>
-        <button class="nav-btn absolute top-1/2 right-4" @click="goNextImage"><img src="/src/assets/images/icon-next.svg" alt="next icon" /></button>
+    <div class="relative -mx-[--mobile-main-content-padding] -mt-[--mobile-main-content-padding]">
+        <div class="grid">
+            <Transition name="viewer">
+                <img :key="currentIndex" :src="currentImage.src" :alt="currentImage.alt" class="  col-span-full row-span-full" />
+            </Transition>
+        </div>
+        <button class="nav-btn left-4" @click="goPreviousImage"><img src="/src/assets/images/icon-previous.svg"
+                alt="previous icon" /></button>
+        <button class="nav-btn right-4" @click="goNextImage"><img src="/src/assets/images/icon-next.svg"
+                alt="next icon" /></button>
     </div>
 </template>
 <script lang="ts" setup>
@@ -34,10 +38,21 @@ const currentImage = computed(() => {
 </script>
 <style lang="scss" scoped>
 .nav-btn{
-    @apply bg-white rounded-full aspect-square w-[40px] grid place-content-center;
+    @apply bg-white rounded-full aspect-square w-[40px] grid place-content-center absolute top-1/2 -translate-y-1/2;
 }
 .viewer-enter-active,
 .viewer-leave-active {
-    // transition: all 0.5s;
+    transition: opacity 0.5s;
+}
+
+.viewer-enter-from,
+.viewer-leave-to {
+    opacity: 0;
+}
+
+
+.viewer-enter-to,
+.viewer-leave-from {
+    opacity: 1;
 }
 </style>

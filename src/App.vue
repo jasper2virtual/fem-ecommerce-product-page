@@ -7,7 +7,7 @@
   </div>
 
   <main class="main-content mx-auto max-w-[--grid-width] border-t 
-  py-4 px-4 app-desktop:px-0 app-desktop:py-8
+   p-[--mobile-main-content-padding] app-desktop:p-[--desktop-main-content-padding]
   ">
     <product :product-item="productItem" />
   </main>
