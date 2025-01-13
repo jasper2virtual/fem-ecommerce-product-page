@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed inset-0 bg-white mx-auto h-fit max-w-[--grid-width] flex
+    <header class="fixed inset-0 bg-white mx-auto h-fit max-w-[--grid-width] flex z-10
        pt-[--desktop-header-padding-top]
         pb-[--desktop-header-padding-bottom]
         pl-[--desktop-header-padding-left]

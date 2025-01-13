@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed inset-0 h-fit bg-white max-w-[--grid-width] w-full mx-auto
+    <div class="fixed inset-0 h-fit bg-white max-w-[--grid-width] w-full mx-auto z-10
     pt-[--mobile-header-padding-top]
     pb-[--mobile-header-padding-bottom]
     pl-[--mobile-header-padding-left]
@@ -18,7 +18,7 @@
         </header>
     </div>
     <transition>
-        <div v-if="isMenuOpen" class="fixed inset-0 mx-auto bg-black/75 w-full max-w-[--grid-width]">
+        <div v-if="isMenuOpen" class="fixed inset-0 mx-auto bg-black/75 w-full max-w-[--grid-width] z-10">
             <div class="max-w-[200px] bg-white flex flex-col h-full
             pt-[--mobile-header-padding-top]
             pb-[--mobile-header-padding-bottom]
