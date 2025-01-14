@@ -21,8 +21,10 @@
                     <span class=" grow text-center">{{ qty }}</span>
                     <button @click="qty += 1"><img src="/src/assets/images/icon-plus.svg" alt="plus" /></button>
                 </div>
-                <button class="bg-[#FF7E1B] text-black rounded p-4 flex gap-4 justify-center">
-                    <img src="/src/assets/images/icon-cart.svg" />
+                <button class="bg-[#FF7E1B] text-black rounded p-4 flex gap-4 justify-center shadow-2xl shadow-[#FFC599]"
+                @click="shoppingCart.add(props.productItem, qty)"
+                >
+                    <div class="icon-cart" v-html="iconCart"></div>
                     <span>Add to Cart</span>
                 </button>
             </div>
@@ -32,6 +34,9 @@
 </template>
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
+import iconCart from '/src/assets/images/icon-cart.svg?raw'
+import { inject } from 'vue'
+
 interface ProductItem {
     brand: string;
     name: string;
@@ -50,10 +55,17 @@ const props = defineProps<{
 
 import MobileImagesViewer from './mobile-images-viewer.vue'
 const qty = ref(0)
-watch(() => qty.value, (newVal) => {
+watch(qty, (newVal) => {
     if (newVal < 0) {
         qty.value = 0
     }
 })
 
+const shoppingCart = inject('shoppingCart')
+
 </script>
+<style lang="scss" scoped>
+.icon-cart * {
+    @apply fill-black;
+}
+</style>

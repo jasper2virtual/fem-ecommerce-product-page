@@ -13,23 +13,27 @@
   </main>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, provide } from 'vue'
+
 import MobileHeader from './components/mobile-header.vue'
 import DesktopHeader from './components/desktop-header.vue'
 import Product from './components/product.vue'
-import menuData from './data/menu'
-import productData from './data/product'
-const menuItems = ref(menuData)
-const productItem=ref(productData)
+import menuData, { type TmenuItem } from './data/menu'
+import productData, { type Tproduct } from './data/product'
+import { useShoppingCart } from './shoppingCart'
+const menuItems = ref<TmenuItem[]>(menuData)
+const productItem = ref<Tproduct>(productData)
+provide('shoppingCart', useShoppingCart())
+
 </script>
 
 <style lang="scss" scoped>
 .main-content {
-  margin-top:calc(var(--mobile-header-height) + var(--mobile-header-padding-top) + var(--mobile-header-padding-bottom));
+  margin-top:--mobile-main-content-margin-top;
 }
 @media (min-width: theme('screens.app-desktop')) {
   .main-content {
-    margin-top:calc(var(--desktop-header-height) + var(--desktop-header-padding-top) + var(--desktop-header-padding-bottom));
+    margin-top:--desktop-main-content-margin-top;
   }
 }
 </style>

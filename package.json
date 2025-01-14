@@ -12,6 +12,7 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@types/uniqid": "^5.3.4",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
     "autoprefixer": "^10.4.20",
@@ -19,6 +20,7 @@
     "sass-embedded": "^1.83.1",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.6.2",
+    "uniqid": "^5.4.0",
     "vite": "^6.0.5",
     "vue-tsc": "^2.2.0"
   }

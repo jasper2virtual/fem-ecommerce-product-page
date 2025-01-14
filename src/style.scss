@@ -22,9 +22,12 @@
     --desktop-header-padding-bottom:1rem;
     --desktop-header-padding-left:0rem;
     --desktop-header-padding-right:0rem;
+
+    --mobile-main-content-margin-top: calc(var(--mobile-header-height) + var(--mobile-header-padding-top) + var(--mobile-header-padding-bottom));
+    --desktop-main-content-margin-top: calc(var(--desktop-header-height) + var(--desktop-header-padding-top) + var(--desktop-header-padding-bottom));
     
---mobile-main-content-padding: 1rem;
---desktop-main-content-padding: 2rem;
+    --mobile-main-content-padding: 1rem;
+    --desktop-main-content-padding: 2rem;
 
     --mobile-screen-padding: 0rem;
     --desktop-screen-padding: 2rem;

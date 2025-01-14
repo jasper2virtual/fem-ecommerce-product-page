@@ -1,4 +1,18 @@
-export default {
+export type Tproduct={
+    brand: string;
+    name: string;
+    desc: string;
+    price: number;
+    discount: number;
+    images: {
+        src: string;
+        alt: string;
+        thumbnailSrc: string;
+    }[];
+}
+
+
+const product: Tproduct = {
     brand: 'Sneaker Company',
     name: 'Fall Limited Edition Sneakers',
     desc: 'These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.',
@@ -29,3 +43,5 @@ export default {
 
 }
 
+
+export default product
