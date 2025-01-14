@@ -2,7 +2,7 @@
     <div class="relative -mx-[--mobile-main-content-padding] -mt-[--mobile-main-content-padding]">
         <div class="grid">
             <Transition name="viewer">
-                <img :key="currentIndex" :src="currentImage.src" :alt="currentImage.alt" class="  col-span-full row-span-full" />
+                <img :key="currentIndex" :src="currentImage.src" :alt="currentImage.alt" class=" object-cover w-full col-span-full row-span-full" />
             </Transition>
         </div>
         <button class="nav-btn left-4" @click="goPreviousImage"><img src="/src/assets/images/icon-previous.svg"
@@ -55,4 +55,6 @@ const currentImage = computed(() => {
 .viewer-leave-from {
     opacity: 1;
 }
+
+
 </style>

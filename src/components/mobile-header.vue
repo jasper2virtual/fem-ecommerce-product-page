@@ -6,7 +6,7 @@
     pr-[--mobile-header-padding-right]">
         <header class="h-[--mobile-header-height] flex items-center">
             <div class="flex items-center gap-4">
-                <button @click="isMenuOpen = !isMenuOpen">
+                <button @click="isMenuOpen =true">
                     <img src="/src/assets/images/icon-menu.svg" alt="Menu" />
                 </button>
                 <header-logo></header-logo>
@@ -18,23 +18,27 @@
         </header>
     </div>
     <transition>
-        <div v-if="isMenuOpen" class="fixed inset-0 mx-auto bg-black/75 w-full max-w-[--grid-width] z-10">
-            <div class="max-w-[200px] bg-white flex flex-col h-full
-            pt-[--mobile-header-padding-top]
-            pb-[--mobile-header-padding-bottom]
-            pl-[--mobile-header-padding-left]
-            pr-[--mobile-header-padding-right]">
-                <div class="flex items-center h-[--mobile-header-height]">
-                    <button @click="isMenuOpen = !isMenuOpen">
-                        <img src="/src/assets/images/icon-close.svg" alt="Close" />
-                    </button>
+        <div v-if="isMenuOpen" class="fixed inset-0 bg-black/75 z-10" @click="isMenuOpen=false">
+            <div class="max-w-[--grid-width] w-full mx-auto h-full">
+                <div 
+                @click.stop
+                class="max-w-[200px] bg-white flex flex-col h-full
+                pt-[--mobile-header-padding-top]
+                pb-[--mobile-header-padding-bottom]
+                pl-[--mobile-header-padding-left]
+                pr-[--mobile-header-padding-right]">
+                    <div class="flex items-center h-[--mobile-header-height]">
+                        <button @click="isMenuOpen=false">
+                            <img src="/src/assets/images/icon-close.svg" alt="Close" />
+                        </button>
+                    </div>
+                    <div class="max-h-[100px] grow"></div>
+                    <nav>
+                        <ul class="flex flex-col gap-4">
+                            <li v-for="item in props.menuItems" :key="item"><a href="#">{{ item }}</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="max-h-[100px] grow"></div>
-                <nav>
-                    <ul class="flex flex-col gap-4">
-                        <li v-for="item in props.menuItems" :key="item"><a href="#">{{ item }}</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </transition>
@@ -64,4 +68,5 @@ const props = defineProps<{
 .v-leave-from {
     transform: translateX(0);
 }
+
 </style>

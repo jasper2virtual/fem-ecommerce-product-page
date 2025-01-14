@@ -1,7 +1,7 @@
 <template>
     <div class="relative">
 
-        <button class="cart" @click="showViewer = !showViewer">
+        <button class="cart" @click="showViewer = true">
             <img src="/src/assets/images/icon-cart.svg" alt="cart" />
         </button>
         <span
@@ -12,7 +12,7 @@
     </div>
 
     <Transition name="viewer">
-        <shopping-cart-viewer v-if="showViewer" />
+        <shopping-cart-viewer v-if="showViewer" @close="showViewer=false" />
     </Transition>
 
 </template>
