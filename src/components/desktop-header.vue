@@ -16,7 +16,7 @@
                                 <a href="#" class=" col-span-full row-span-full text-[#69707D] hover:text-black peer">{{
                                     item }}</a>
                                 <hr
-                                    class="w-full col-span-full row-span-full peer-hover:border-b-2 peer-hover:border-b-[#FF7E1B] border-none peer-hover:border-solid translate-y-[calc(var(--desktop-header-height)/2+var(--desktop-header-padding-bottom))] ">
+                                    class="w-full col-span-full row-span-full peer-hover:border-2 peer-hover:border-[#FF7E1B] border-none peer-hover:border-solid translate-y-[calc(var(--desktop-header-height)/2+var(--desktop-header-padding-bottom))] ">
                             </div>
 
                         </li>
