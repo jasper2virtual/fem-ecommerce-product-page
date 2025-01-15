@@ -7,8 +7,8 @@
                 <hr>
                 <div v-if="totalQty > 0" class="flex flex-col gap-4 p-4 overflow-y-hidden">
                     <div class="flex flex-col gap-4 overflow-y-scroll">
-                        <div class="flex gap-4" v-for="item in itemsArray" :key="item.key">
-                            <img :src="item.picSrc" class="w-[50px] aspect-square rounded" alt="product picture" />
+                        <div class="flex items-center gap-4" v-for="item in itemsArray" :key="item.key">
+                            <img :src="item.picSrc" class="w-[50px] h-[50px] rounded" alt="product picture" />
                             <div class="flex flex-col">
                                 <div>{{ item.name }}</div>
                                 <div class="flex gap-4">

@@ -6,7 +6,7 @@
     <desktop-header :menu-items="menuItems"></desktop-header>
   </div>
 
-  <main class="main-content mx-auto max-w-[--grid-width] border-t 
+  <main class="main-content mx-auto max-w-[--grid-width]  
    p-[--mobile-main-content-padding] app-desktop:p-[--desktop-main-content-padding]
   ">
     <product :product-item="productItem" />
@@ -29,11 +29,11 @@ provide('shoppingCart', useShoppingCart())
 
 <style lang="scss" scoped>
 .main-content {
-  margin-top:--mobile-main-content-margin-top;
+  @apply mt-[--mobile-main-content-margin-top]
 }
 @media (min-width: theme('screens.app-desktop')) {
   .main-content {
-    margin-top:--desktop-main-content-margin-top;
+    @apply mt-[--desktop-main-content-margin-top]
   }
 }
 </style>
