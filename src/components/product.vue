@@ -22,7 +22,7 @@
                     <button @click="qty += 1"><img src="/src/assets/images/icon-plus.svg" alt="plus" /></button>
                 </div>
                 <button class="bg-[#FF7E1B] text-black rounded p-4 flex gap-4 justify-center shadow-2xl shadow-[#FFC599]"
-                @click="shoppingCart.add(props.productItem, qty)"
+                @click="shoppingCart.add(props.productItem, qty);qty=0"
                 >
                     <div class="icon-cart" v-html="iconCart"></div>
                     <span>Add to Cart</span>

@@ -22,22 +22,22 @@ const product: Tproduct = {
         {
             src: 'image-product-1.jpg',
             alt: 'product 1',
-            thumbnailSrc: 'image-product-1-thumbnailSrc.jpg'
+            thumbnailSrc: 'image-product-1-thumbnail.jpg'
         },
         {
             src: 'image-product-2.jpg',
             alt: 'product 2',
-            thumbnailSrc: 'image-product-2-thumbnailSrc.jpg'
+            thumbnailSrc: 'image-product-2-thumbnail.jpg'
         },
         {
             src: 'image-product-3.jpg',
             alt: 'product 3',
-            thumbnailSrc: 'image-product-3-thumbnailSrc.jpg'
+            thumbnailSrc: 'image-product-3-thumbnail.jpg'
         },
         {
             src: 'image-product-4.jpg',
             alt: 'product 4',
-            thumbnailSrc: 'image-product-4-thumbnailSrc.jpg'
+            thumbnailSrc: 'image-product-4-thumbnail.jpg'
         }
     ]
 
