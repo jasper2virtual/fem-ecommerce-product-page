@@ -1,6 +1,6 @@
 <template>
     <div class="relative -mx-[--mobile-main-content-padding] -mt-[--mobile-main-content-padding]">
-        <div class="grid place-items-center">
+        <div class="grid">
             <Transition name="viewer">
                 <img :key="currentIndex" :src="currentImage.src" :alt="currentImage.alt" class=" object-cover w-full col-span-full row-span-full" />
             </Transition>

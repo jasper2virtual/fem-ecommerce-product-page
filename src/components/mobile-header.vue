@@ -35,7 +35,7 @@
                     <div class="max-h-[100px] grow"></div>
                     <nav>
                         <ul class="flex flex-col gap-4">
-                            <li v-for="item in props.menuItems" :key="item"><a href="#">{{ item }}</a></li>
+                            <li v-for="item in props.menuItems" :key="item"><a href="#" class="font-bold text-lg">{{ item }}</a></li>
                         </ul>
                     </nav>
                 </div>
